@@ -1,13 +1,13 @@
-.eduinside-navbar-brand {
+.quiz-navbar-brand {
     margin: 0;
 }
 
-.eduinside-navbar {
+.quiz-navbar {
     padding: 0;
 }
 
 
-.eduinside-navbar-items {
+.quiz-navbar-items {
     display: flex;
     justify-content: flex-end;
     column-gap: 10px;
@@ -15,6 +15,6 @@
 }
 
 
-.eduinside-navbar-items li {
+.quiz-navbar-items li {
     font-size: larger;
 }
