@@ -1,5 +1,13 @@
-.bg-teal {
+.text-teal {
     color: rgb(19 78 74);
+}
+
+.border-teal {
+    color: rgb(19 78 74);
+}
+
+.text-teal2 {
+    color: red;
 }
 
 
@@ -19,4 +27,12 @@
 .quiz-navbar-items li {
     font-size: larger;
     font-weight: 600;
+}
+
+.nav-link {
+    padding-bottom: 2px;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: rgb(19 78 74);
 }

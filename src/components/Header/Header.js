@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -14,16 +14,16 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="quiz-navbar-items navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">Home</Link>
+                                <NavLink className={({isActive}) => isActive ? "nav-link text-teal border-bottom border-2 border-success" : "nav-link"} to="/home">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="topics">Topics</Link>
+                                <NavLink className={({isActive}) => isActive ? "nav-link text-teal border-bottom border-2 border-success" : "nav-link"} to="topics">Topics</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="statistics">Statistics</Link>
+                                <NavLink className={({isActive}) => isActive ? "nav-link text-teal border-bottom border-2 border-success" : "nav-link"} to="statistics">Statistics</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="blog">Blog</Link>
+                                <NavLink className={({isActive}) => isActive ? "nav-link text-teal border-bottom border-2 border-success" : "nav-link"} to="blog">Blog</NavLink>
                             </li>
                         </ul>
                     </div>
