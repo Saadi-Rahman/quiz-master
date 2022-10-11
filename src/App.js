@@ -29,6 +29,14 @@ function App() {
           element: <Blog></Blog>
         }
       ]
+    },
+    {
+      path: '*',
+      element: 
+      <div className='d-flex justify-content-center align-items-center flex-column vh-100'>
+        <p className='fs-1 fw-bold bg-teal'>404 Not Found!</p>
+        <p className='fs-6 fw-semibold'>Woops!! Looks like this page doesn't exist!</p>
+      </div>
     }
   ])
 
