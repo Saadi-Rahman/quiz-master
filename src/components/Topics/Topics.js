@@ -6,8 +6,6 @@ const Topics = () => {
     const loaderData = useLoaderData();
     const quizs = loaderData.data;
 
-    console.log(quizs);
-
     return (
         <div className='container'>
             <h2 className='fw-bold text-teal pb-4'>Select your topic and test your knowledge on QuizMaster!!</h2>
