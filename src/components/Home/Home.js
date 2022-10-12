@@ -13,7 +13,7 @@ const Home = () => {
                     <p>Check out our online computer programming quizzes to enhance your knowledge, learn new things or prepare for an upcoming test. Made up of well-researched and interesting quiz questions, each and every quiz here can test your awareness and grasp of the subject.</p>
 
                     <div className="my-4">
-                        <Link to="" className="btn btn-quiz px-4 py-2">Get Started</Link>
+                        <Link to="/topics" className="btn btn-quiz px-4 py-2">Get Started</Link>
                     </div>
                 </div>
                 <div className="col-lg-6">
