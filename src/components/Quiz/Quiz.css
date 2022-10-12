@@ -1,13 +1,13 @@
 .btn-quiz {
-    background-color: rgb(15 118 110);
-    color: white;
-}
-
-.btn-quiz:hover {
     background-color: rgb(17 94 89);
     color: white;
 }
 
+.btn-quiz:hover {
+    background-color: rgb(19 78 74);
+    color: white;
+}
+
 .bg-img {
-    background-color: rgb(224 242 254);
+    background-color: rgb(204 251 241);
 }
