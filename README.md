@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Short Description about QuizMaster website
+
+QuizMaster is an online quiz website. Anyone can use this website to test his basic programming skills. This website is built using React and Bootstrap.
+
+## Live link
+
+https://glittery-meringue-dfbd4d.netlify.app/
