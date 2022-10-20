@@ -1,22 +1,45 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Quiz.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import QuizOption from '../QuizOption/QuizOption';
 
-const Quiz = ({quiz}) => {
-    const {id, logo, name, total} = quiz;
+const Quiz = ({quiz, index}) => {
+    const { options, question, correctAnswer } = quiz;
+    const [score, setScore] = useState(0);
+
+    const rightAns = (quiz) => {
+        toast.success(quiz, {autoClose: 1500});
+    }
+
+    const handleClick = (option) => {
+        if (correctAnswer === option) {
+            toast.success('success: right answer', {autoClose: 500});
+            setScore(score + 1);
+        }
+        else {
+            toast.error('incorrect: wrong answer', {autoClose: 500})
+        }
+    }
+
     return (
-        <div className="col">
-            <div className="card h-100 shadow">
-                <img src={logo} className="card-img-top bg-img" alt="" />
-                <div className="card-body">
-                    <h5 className="card-title text-teal">Topics: {name}</h5>
-                    <p className="card-text">This quiz contains some questions and there is no time limit. It's just a nice way to see how much you know about this topic.</p>
-                </div>
-                <div className="d-flex justify-content-between align-items-center p-3 pt-0">
-                    <small className="text-teal">Total Quiz: {total}</small>
-                    <Link to={`/quiz/${id}`} className="btn btn-quiz px-4 py-2">Start Quiz</Link>
+        <div className='bg-white shadow rounded p-4 mb-4'>
+            <div className='d-flex justify-content-between'>
+                <h5 className="text-teal fs-5 fw-bold mb-3">Quiz {index + 1}: {question.replace( /(<([^>]+)>)/ig, '')}</h5>
+                <div className='text-teal' style={{cursor: "pointer"}} onClick={() => rightAns(correctAnswer)}>
+                    <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                    <ToastContainer />
                 </div>
             </div>
+            {
+                options.map((option, id) => <QuizOption
+                key={id}
+                option={option}
+                quiz={quiz}
+                handleClick={handleClick}
+                ></QuizOption>)
+            }
         </div>
     );
 };
